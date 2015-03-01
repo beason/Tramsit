@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tramsit App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<link rel="stylesheet" type="text/css" href="style/core.css?v=1" />
+	<link rel="stylesheet" type="text/css" href="style/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="style/fonts.css" />
+</head>
+<body>
+<div class="container">
+<div class="logo">
+	<i class="icon-tramsit"></i>
+</div>
+
+<div id="journey-planner" class="bottom journey-planner">
+	<div class="no-geo">
+		<h2>Where are you?</h2>
+		<select id="start-stop" class="tram-stops">
+			<option>Travelling from...</option>
+		</select>
+	</div>
+	<h2>Where would you like to go?</h2>
+	<select id="end-stop" class="tram-stops">
+		<option>Travelling to...</option>
+	</select>
+	<button id="trigger-overlay" class="find-tram">Find my next tram</button>
+</div>
+</div>
+<div class="overlay overlay-contentscale">
+<div id="nearest-stop-area" class="faded">
+	<h2>Your nearest tram stop is</h2>
+	<h1 id="nearest-stop"></h1>
+	<h2>Your next tram is in</h2>
+<h1 class="time-wait"></h1>
+</div>
+<div class="wrapper">
+
+
+<!-- <ul id="tram-times" class="faded">
+</ul> -->
+
+<ul id="instructions">
+</ul>
+			
+</div>
+<div class="bottom actions-area">
+	<a href="#" class="overlay-close"><i class="fa fa-angle-left"></i>Back</a>
+	<a href="#" class="show-map"><i class="fa fa-location-arrow"></i>Directions</a>
+</div>
+</div>
+<div id="stop-directions">
+<div id="map-canvas"></div>
+<div class="bottom actions-area">
+	<a href="#" class="close-map"><i class="fa fa-angle-left"></i>Back</a>
+
+</div>
+</div>
+
+<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> -->
+<script type="text/javascript" src="script/jquery.1.11.0.min.js"></script>
+<script type="text/javascript" src="script/modernizr.custom.js"></script>
+<script type="text/javascript" src="script/classie.min.js"></script>
+<script type="text/javascript" src="script/core.js?v=1"></script>
+<script type="text/javascript" src="script/directions.js?v=1"></script>
+</body>
+</html>

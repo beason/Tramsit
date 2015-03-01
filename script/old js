@@ -1,0 +1,27 @@
+function lookup_location() {
+  geoPosition.getCurrentPosition(show_map, show_map_error);
+}
+
+function show_map(loc) {
+var myLatlng = new google.maps.LatLng(loc.coords.latitude,loc.coords.longitude);
+var mapOptions = {
+          center: myLatlng,
+          zoom: 18,
+          disableDefaultUI: true,
+          draggable: false	
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+
+        var marker = new google.maps.Marker({
+    		position: myLatlng,
+    		map: map,
+    		title:"Hello World!"
+});
+      
+}
+
+
+function show_map_error() {
+  $("#live-geolocation").html('Unable to determine your location.');
+}

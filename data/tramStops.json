@@ -1,0 +1,439 @@
+{
+	"0": {
+		"stopName": "Arbourthorne Road",
+		"stopCode": "940GZZSYABR",
+		"stopLat": "53.3634336",
+		"stopLong": "-1.4479913",
+		"stopRoutes": [
+			"Blue","Purple"
+		]
+	},
+	"1": {
+		"stopName": "Arena / Don Valley",
+		"stopCode": "940GZZSYDVS",
+		"stopLat": "53.39821",
+		"stopLong": "-1.42049",
+		"stopRoutes": [
+			"Yellow"
+		]
+	},
+	"2": {
+		"stopName": "Attercliffe",
+		"stopCode": "940GZZSYATT",
+		"stopLat": "53.3910458",
+		"stopLong": "-1.4356176",
+		"stopRoutes": [
+			"Yellow"
+		]
+	},
+	"3": {
+		"stopName": "Bamforth Street",
+		"stopCode": "940GZZSYBAM",
+		"stopLat": "53.3988276",
+		"stopLong": "-1.4926317",
+		"stopRoutes": [
+			"Yellow","Blue"
+		]
+	},
+	"4": {
+		"stopName": "Beighton / Drake House Lane",
+		"stopCode": "940GZZSYDHL",
+		"stopLat": "53.342282",
+		"stopLong": "-1.3465092",
+		"stopRoutes": [
+			"Blue"
+		]
+	},
+	"5": {
+		"stopName": "Birley Lane",
+		"stopCode": "940GZZSYDHL",
+		"stopLat": "53.3404",
+		"stopLong": "-1.39935",
+		"stopRoutes": [
+			"Blue"
+		]
+	},
+	"6": {
+		"stopName": "Birley Moor Road",
+		"stopCode": "940GZZSYDHL",
+		"stopLat": "53.34158",
+		"stopLong": "-1.38868",
+		"stopRoutes": [
+			"Blue"
+		]
+	},
+	"7": {
+		"stopName": "Carbrook",
+		"stopCode": "940GZZSYCRB",
+		"stopLat": "53.40556",
+		"stopLong": "-1.41084",
+		"stopRoutes": [
+			"Yellow"
+		]
+	},
+	"8": {
+		"stopName": "Castle Square",
+		"stopCode": "940GZZSYCRB",
+		"stopLat": "53.38311",
+		"stopLong": "-1.46606",
+		"stopRoutes": [
+			"Yellow","Blue","Purple"
+		]
+	},
+	"9": {
+		"stopName": "Cathedral",
+		"stopCode": "940GZZSYCAT",
+		"stopLat": "53.3826",
+		"stopLong": "-1.46904",
+		"stopRoutes": [
+			"Yellow","Blue","Purple"
+		]
+	},
+	"10": {
+		"stopName": "City Hall",
+		"stopCode": "940GZZSYCAT",
+		"stopLat": "53.38178",
+		"stopLong": "-1.47285",
+		"stopRoutes": [
+			"Yellow","Blue"
+		]
+	},
+	"11": {
+		"stopName": "Cricket Inn Road",
+		"stopCode": "940GZZSYCIR",
+		"stopLat": "53.38403",
+		"stopLong": "-1.44662",
+		"stopRoutes": [
+			"Yellow"
+		]
+	},
+
+	"12": {
+		"stopName": "Crystal Peaks",
+		"stopCode": "940GZZSYCIR",
+		"stopLat": "53.3417",
+		"stopLong": "-1.35613",
+		"stopRoutes": [
+			"Blue"
+		]
+	},
+	"13": {
+		"stopName": "Donetsk Way",
+		"stopCode": "940GZZSYCIR",
+		"stopLat": "53.34174",
+		"stopLong": "-1.37037",
+		"stopRoutes": [
+			"Blue"
+		]
+	},
+	"14": {
+		"stopName": "Fitzalan Square / Ponds Forge",
+		"stopCode": "940GZZSYCIR",
+		"stopLat": "53.3831524",
+		"stopLong": "-1.4637244",
+		"stopRoutes": [
+			"Yellow","Blue","Purple"
+		]
+	},
+	"15": {
+		"stopName": "Gleadless Townend",
+		"stopCode": "940GZZSYGLE",
+		"stopLat": "53.34608",
+		"stopLong": "-1.42586",
+		"stopRoutes": [
+			"Blue","Purple"
+		]
+	},
+	"16": {
+		"stopName": "Granville Road / Sheffield College",
+		"stopCode": "940GZZSYGLE",
+		"stopLat": "53.3744",
+		"stopLong": "-1.46131",
+		"stopRoutes": [
+			"Blue","Purple"
+		]
+	},
+	"17": {
+		"stopName": "Hackenthorpe",
+		"stopCode": "940GZZSYHAK",
+		"stopLat": "53.34359",
+		"stopLong": "-1.38105",
+		"stopRoutes": [
+			"Blue"
+		]
+	},
+	"18": {
+		"stopName": "Halfway",
+		"stopCode": "940GZZSYHFW",
+		"stopLat": "53.32856",
+		"stopLong": "-1.34433",
+		"stopRoutes": [
+			"Blue"
+		]
+	},
+	"19": {
+		"stopName": "Herdings Park",
+		"stopCode": "940GZZSYHDP",
+		"stopLat": "53.34246",
+		"stopLong": "-1.43987",
+		"stopRoutes": [
+			"Purple"
+		]
+	},
+	"20": {
+		"stopName": "Herdings / Leighton Road",
+		"stopCode": "940GZZSYHDP",
+		"stopLat": "53.34246",
+		"stopLong": "-1.43245",
+		"stopRoutes": [
+			"Purple"
+		]
+	},
+	"21": {
+		"stopName": "Hillsborough",
+		"stopCode": "940GZZSYHIL",
+		"stopLat": "53.40202",
+		"stopLong": "-1.49996",
+		"stopRoutes": [
+			"Yellow","Blue"
+		]
+	},
+	"22": {
+		"stopName": "Hillsborough Park",
+		"stopCode": "940GZZSYHIL",
+		"stopLat": "53.40442",
+		"stopLong": "-1.50365",
+		"stopRoutes": [
+			"Yellow"
+		]
+	},
+	"23": {
+		"stopName": "Hollinsend",
+		"stopCode": "940GZZSYLPH",
+		"stopLat": "53.35205",
+		"stopLong": "-1.42453",
+		"stopRoutes": [
+			"Blue","Purple"
+		]
+	},
+	"24": {
+		"stopName": "Hyde Park",
+		"stopCode": "940GZZSYLPH",
+		"stopLat": "53.38464",
+		"stopLong": "-1.4524",
+		"stopRoutes": [
+			"Yellow"
+		]
+	},
+	"25": {
+		"stopName": "Infirmary Road",
+		"stopCode": "940GZZSYMAL",
+		"stopLat": "53.3909",
+		"stopLong": "-1.48246",
+		"stopRoutes": [
+			"Yellow","Blue"
+		]
+	},
+	"26": {
+		"stopName": "Langsett / Primrose View",
+		"stopCode": "940GZZSYLPH",
+		"stopLat": "53.39578",
+		"stopLong": "-1.48934",
+		"stopRoutes": [
+			"Yellow","Blue"
+		]
+	},
+	"27": {
+		"stopName": "Leppings Lane",
+		"stopCode": "940GZZSYLPH",
+		"stopLat": "53.41027",
+		"stopLong": "-1.50421",
+		"stopRoutes": [
+			"Yellow"
+		]
+	},
+	"28": {
+		"stopName": "Malin Bridge",
+		"stopCode": "940GZZSYMAL",
+		"stopLat": "53.40064",
+		"stopLong": "-1.5083",
+		"stopRoutes": [
+			"Blue"
+		]
+	},
+	"29": {
+		"stopName": "Manor Top / Elm Tree",
+		"stopCode": "940GZZSYMRT",
+		"stopLat": "53.35972",
+		"stopLong": "-1.42865",
+		"stopRoutes": [
+			"Blue","Purple"
+		]
+	},
+	"30": {
+		"stopName": "Meadowhall Interchange",
+		"stopCode": "940GZZSYMHI",
+		"stopLat": "53.4173944",
+		"stopLong": "-1.4125088",
+		"stopRoutes": [
+			"Yellow"
+		]
+	},
+	"31": {
+		"stopName": "Meadowhall South / Tinsley",
+		"stopCode": "940GZZSYMHS",
+		"stopLat": "53.41425",
+		"stopLong": "-1.40499",
+		"stopRoutes": [
+			"Yellow"
+		]
+	},
+	"32": {
+		"stopName": "Middlewood",
+		"stopCode": "940GZZSYMHI",
+		"stopLat": "53.41588",
+		"stopLong": "-1.51008",
+		"stopRoutes": [
+			"Yellow"
+		]
+	},
+	"33": {
+		"stopName": "Moss Way",
+		"stopCode": "940GZZSYMHI",
+		"stopLat": "53.34219",
+		"stopLong": "-1.36266",
+		"stopRoutes": [
+			"Blue"
+		]
+	},
+	"34": {
+		"stopName": "Netherthorpe Road",
+		"stopCode": "940GZZSYMHI",
+		"stopLat": "53.38474",
+		"stopLong": "-1.48252",
+		"stopRoutes": [
+			"Yellow","Blue"
+		]
+	},
+	"35": {
+		"stopName": "Nunnery Square",
+		"stopCode": "940GZZSYMHI",
+		"stopLat": "53.38552",
+		"stopLong": "-1.44176",
+		"stopRoutes": [
+			"Yellow"
+		]
+	},
+	"36": {
+		"stopName": "Park Grange",
+		"stopCode": "940GZZSYPGC",
+		"stopLat": "53.36714",
+		"stopLong": "-1.455",
+		"stopRoutes": [
+			"Blue","Purple"
+		]
+	},
+	"37": {
+		"stopName": "Park Grange Croft",
+		"stopCode": "940GZZSYPGR",
+		"stopLat": "53.37032",
+		"stopLong": "-1.45876",
+		"stopRoutes": [
+			"Blue","Purple"
+		]
+	},
+	"38": {
+		"stopName": "Shalesmoor",
+		"stopCode": "940GZZSYSHL",
+		"stopLat": "53.38869",
+		"stopLong": "-1.47793",
+		"stopRoutes": [
+			"Yellow","Blue"
+		]
+	},
+	"39": {
+		"stopName": "Sheffield Station / Sheffield Hallam University",
+		"stopCode": "940GZZSYSHU",
+		"stopLat": "53.3783572",
+		"stopLong": "-1.4662406",
+		"stopRoutes": [
+			"Blue","Purple"
+		]
+	},
+	"40": {
+		"stopName": "Spring Lane",
+		"stopCode": "940GZZSYSPL",
+		"stopLat": "53.3663",
+		"stopLong": "-1.43872",
+		"stopRoutes": [
+			"Blue","Purple"
+		]
+	},
+	"41": {
+		"stopName": "University of Sheffield",
+		"stopCode": "940GZZSYUNI",
+		"stopLat": "53.38071",
+		"stopLong": "-1.48405",
+		"stopRoutes": [
+			"Yellow","Blue"
+		]
+	},
+	"42": {
+		"stopName": "Valley Centertainment",
+		"stopCode": "940GZZSYVEN",
+		"stopLat": "53.40221",
+		"stopLong": "-1.41266",
+		"stopRoutes": [
+			"Yellow"
+		]
+	},
+	"43": {
+		"stopName": "Waterthorpe",
+		"stopCode": "940GZZSYWTR",
+		"stopLat": "53.3364219",
+		"stopLong": "-1.3449788",
+		"stopRoutes": [
+			"Blue"
+		]
+	},
+	"44": {
+		"stopName": "Westfield",
+		"stopCode": "940GZZSYWTF",
+		"stopLat": "53.33189",
+		"stopLong": "-1.34385",
+		"stopRoutes": [
+			"Blue"
+		]
+	},
+	"45": {
+		"stopName": "White Lane",
+		"stopCode": "940GZZSYWTL",
+		"stopLat": "53.3444733",
+		"stopLong": "-1.4246053",
+		"stopRoutes": [
+			"Blue"
+		]
+	},
+	"46": {
+		"stopName": "West Street",
+		"stopCode": "940GZZSYWTS",
+		"stopLat": "53.38057",
+		"stopLong": "-1.47747",
+		"stopRoutes": [
+			"Yellow","Blue"
+		]
+	},
+	"47": {
+		"stopName": "Woodbourn Road",
+		"stopCode": "940GZZSYWBN",
+		"stopLat": "53.38887",
+		"stopLong": "-1.43454",
+		"stopRoutes": [
+			"Yellow"
+		]
+	}
+}
+
+
+
+ 

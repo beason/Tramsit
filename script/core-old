@@ -1,0 +1,191 @@
+var distances = []
+
+$.getJSON("../data/tramStops.json", function(data) {
+    tramStops = data;
+   for (var i = 0; i < Object.keys(tramStops).length; i++) {
+  		$('#tram-stops').append('<option data-stop='+ i +'>' + tramStops[i].stopName + '</option>');
+	}
+  $('.overlay').show()
+});
+
+
+function getData() {
+  if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(success, error);
+} else {
+  error('not supported');
+}
+}
+
+function error(msg) {
+  var s = document.querySelector('#status');
+  s.innerHTML = typeof msg == 'string' ? msg : "failed";
+  s.className = 'fail';
+  
+  // console.log(arguments);
+}
+
+function success(position) {
+  
+  console.log('user location: ' + position.coords.latitude + ',' + position.coords.longitude)
+  userLat = position.coords.latitude;
+  userLong = position.coords.longitude;
+  for (var i = 0; i < Object.keys(tramStops).length; i++) {
+    stopLat = tramStops[i].stopLat;
+    stopLong = tramStops[i].stopLong;
+    distances.push({stop: i, distance: calcDistance(userLat, userLong, stopLat, stopLong).toFixed(1)})
+
+  }
+
+  distances.sort(function(a, b){
+    return a.distance-b.distance;
+  })
+
+
+  closestStop = distances[0].stop;
+  $('#nearest-stop').html(tramStops[closestStop].stopName + ' <span class="small"> ' + distances[0].distance + ' miles</span>').parent().addClass('fade-in');
+  $('#tram-times').addClass('fade-in');
+  // getMap(closestStop)
+
+}
+  
+//
+
+
+function getUserLocation() {
+    if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(success, error);
+} else {
+  error('not supported');
+}
+}
+
+
+
+
+    function calcDistance(lat1, lon1, lat2, lon2) 
+    {
+      var R = 3959; // miles
+      var dLat = toRad(lat2-lat1);
+      var dLon = toRad(lon2-lon1);
+      var lat1 = toRad(lat1);
+      var lat2 = toRad(lat2);
+
+      var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+        Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2); 
+      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+      var d = R * c;
+      return d;
+    }
+
+    // Converts numeric degrees to radians
+    function toRad(Value) 
+    {
+        return Value * Math.PI / 180;
+    }
+
+
+// SHOWS THE OVERLAY
+
+(function() {
+  var container = document.querySelector( 'div.container' ),
+    triggerBttn = document.getElementById( 'trigger-overlay' ),
+    overlay = document.querySelector( 'div.overlay' ),
+    closeBttn = overlay.querySelector( '.overlay-close' );
+    transEndEventNames = {
+      'WebkitTransition': 'webkitTransitionEnd',
+      'MozTransition': 'transitionend',
+      'OTransition': 'oTransitionEnd',
+      'msTransition': 'MSTransitionEnd',
+      'transition': 'transitionend'
+    },
+    transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
+    support = { transitions : Modernizr.csstransitions };
+
+  function toggleOverlay() {
+    if( classie.has( overlay, 'open' ) ) {
+      classie.remove( overlay, 'open' );
+      classie.remove( container, 'overlay-open' );
+      classie.add( overlay, 'close' );
+      var onEndTransitionFn = function( ev ) {
+        if( support.transitions ) {
+          if( ev.propertyName !== 'visibility' ) return;
+          this.removeEventListener( transEndEventName, onEndTransitionFn );
+        }
+        classie.remove( overlay, 'close' );
+      };
+      if( support.transitions ) {
+        overlay.addEventListener( transEndEventName, onEndTransitionFn );
+      }
+      else {
+        onEndTransitionFn();
+      }
+    }
+    else if( !classie.has( overlay, 'close' ) ) {
+      classie.add( overlay, 'open' );
+      classie.add( container, 'overlay-open' );
+    }
+  }
+  triggerBttn.addEventListener( 'click', toggleOverlay );
+  closeBttn.addEventListener( 'click', toggleOverlay );
+})();
+
+
+function getMap(closestStop) {
+var styles = [
+  {
+    featureType: 'poi',
+    stylers: [
+      { visibility: "off" }
+    ]
+  }
+]
+var myLatlng = new google.maps.LatLng(tramStops[closestStop].stopLat,tramStops[closestStop].stopLong);
+var styledMap = new google.maps.StyledMapType(styles,
+    {name: "Styled Map"});
+var mapOptions = {
+          center: myLatlng,
+          zoom: 17,
+          disableDefaultUI: true,
+          draggable: false  
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+
+         map.mapTypes.set('map_style', styledMap);
+  map.setMapTypeId('map_style');
+
+        var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map
+});
+        }
+
+
+function setCookie(cname,cvalue,exdays)
+  {
+  var d = new Date();
+  d.setTime(d.getTime()+(exdays*24*60*60*1000));
+  var expires = "expires="+d.toGMTString();
+  document.cookie = cname + "=" + cvalue + "; " + expires;
+  }
+
+
+$(document).ready(function() {
+  $('.find-tram').click(function() {
+    getData()
+    setCookie('hello','booooom cookie',30)
+  })
+
+   $('#tram-stops').change(function() {
+    $('.bottom').addClass('show-btn');
+    $('.logo').addClass('move-logo')
+  })
+
+
+
+
+})
+
+// Stops elastic bounce on iOS
+$(document).bind('touchmove',function(e) {e.preventDefault();});
