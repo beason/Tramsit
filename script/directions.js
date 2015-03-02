@@ -86,15 +86,15 @@ function showSteps(dataObj, stepsCount) {
     if (stepsCount >= 3) {
         
     
-        $('#instructions').append('<li class="'+ (dataObj.legs.steps.transit_details.line.short_name).replace(/\s+/g, "")+ '"><span class="depart_time">'+ dataObj.legs.steps.transit_details.departure_time.text+ '</span><span class="blob b_top"></span><span class="arrv_time">'+ dataObj.legs.steps.transit_details.arrival_time.text+ '</span><span class="blob b_bottom"></span><span class="step_inst"><span class="step-stopName stepDep">'+ dataObj.legs.steps.transit_details.departure_stop.name + '</span> <span class="step-stopName stepArrv">' + dataObj.legs.steps.transit_details.arrival_stop.name + ' <span class="leg-duration"> ('+ dataObj.legs.steps.duration.text +')</span></span></li>');
+        $('#instructions').append('<li class="'+ (dataObj.legs.steps.transit_details.line.short_name).replace(/\s+/g, "")+ '"><span class="depart_time">'+ dataObj.legs.steps.transit_details.departure_time.text+ '</span><span class="leg-duration">'+ dataObj.legs.steps.duration.text +'</span><span class="blob b_top"></span><span class="arrv_time">'+ dataObj.legs.steps.transit_details.arrival_time.text+ '</span><span class="blob b_bottom"></span><span class="step_inst"><span class="step-stopName stepDep">'+ dataObj.legs.steps.transit_details.departure_stop.name + '</span> <span class="step-stopName stepArrv">' + dataObj.legs.steps.transit_details.arrival_stop.name + ' </span></li>');
         
     } else {
         $.each(dataObj.legs.steps, function(key, value) {
         if (i != 1)  {
-        $('#instructions').append('<li class="'+ (this.transit_details.line.short_name).replace(/\s+/g, "")+ '"><span class="depart_time">'+ this.transit_details.departure_time.text+ '</span><span class="blob b_top"></span><span class="blob b_bottom"></span><span class="step_inst"><span class="step-stopName stepDep">'+ this.transit_details.departure_stop.name + '</span> <span class="step-stopName stepArrv">' + this.transit_details.arrival_stop.name + ' <span class="leg-duration"> ('+ this.duration.text +')</span></span></li>');
+        $('#instructions').append('<li class="'+ (this.transit_details.line.short_name).replace(/\s+/g, "")+ '"><span class="depart_time">'+ this.transit_details.departure_time.text+ '</span><span class="leg-duration">'+ this.duration.text +'</span><span class="blob b_top"></span><span class="blob b_bottom"></span><span class="step_inst"><span class="step-stopName stepDep">'+ this.transit_details.departure_stop.name + '</span> <span class="step-stopName stepArrv">' + this.transit_details.arrival_stop.name + '</span></li>');
         i++;
         } else {
-        $('#instructions').append('<li class="'+ (this.transit_details.line.short_name).replace(/\s+/g, "")+ '"><span class="depart_time second-dep">'+ this.transit_details.departure_time.text+ '</span><span class="arrv_time">'+ this.transit_details.arrival_time.text+ '</span><span class="blob b_bottom"> <span class="step_inst"><span class="step-stopName stepArrv">' + this.transit_details.arrival_stop.name + ' <span class="leg-duration"> ('+ this.duration.text +')</span></span></li>');
+        $('#instructions').append('<li class="'+ (this.transit_details.line.short_name).replace(/\s+/g, "")+ '"><span class="depart_time second-dep">'+ this.transit_details.departure_time.text+ '</span><span class="leg-duration">'+ this.duration.text +'</span><span class="arrv_time">'+ this.transit_details.arrival_time.text+ '</span><span class="blob b_bottom"> <span class="step_inst"><span class="step-stopName stepArrv">' + this.transit_details.arrival_stop.name + '</span></li>');
         }
         
     });
